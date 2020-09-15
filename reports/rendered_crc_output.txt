@@ -1,8 +1,8 @@
-GigabitEthernet1, no description, crc count: 0, Last Cleared Counter: never
-Loopback0, no description, crc count: 0, Last Cleared Counter: never
-Loopback1, no description, crc count: 0, Last Cleared Counter: never
+GigabitEthernet1, 'description managed by ansible', crc count: 0, Last Cleared Counter: never
+Loopback0, 'description managed by ansible', crc count: 0, Last Cleared Counter: never
+Loopback1, 'description managed by ansible', crc count: 0, Last Cleared Counter: never
 Loopback2, no description, crc count: 0, Last Cleared Counter: never
-Tunnel0, no description, crc count: 0, Last Cleared Counter: 07:56:27
-Tunnel1, no description, crc count: 0, Last Cleared Counter: 07:56:27
-Tunnel2, no description, crc count: 0, Last Cleared Counter: 07:56:27
+Tunnel0, no description, crc count: 0, Last Cleared Counter: 08:03:29
+Tunnel1, no description, crc count: 0, Last Cleared Counter: 08:03:29
+Tunnel2, no description, crc count: 0, Last Cleared Counter: 08:03:29
 VirtualPortGroup0, no description, crc count: 0, Last Cleared Counter: never
