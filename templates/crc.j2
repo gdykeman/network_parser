@@ -1,0 +1,9 @@
+{% for x in parse_output %}
+{% if parse_output[x]['counters']['in_errors'] == 0 %}
+{% if parse_output[x]['description'] is defined %}
+{{ x + ', ' + parse_output[x]['description'] + ', ' + 'crc count: ' + parse_output[x]['counters']['in_errors']|string + ', ' + 'Last Cleared Counter: ' + parse_output[x]['counters']['last_clear']}}
+{% else %}
+{{ x + ', ' + 'no description' + ', ' + 'crc count: ' + parse_output[x]['counters']['in_errors']|string + ', ' + 'Last Cleared Counter: ' + parse_output[x]['counters']['last_clear']}}
+{% endif %}
+{% endif %}
+{% endfor %}

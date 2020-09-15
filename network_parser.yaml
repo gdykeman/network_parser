@@ -1,0 +1,29 @@
+---
+- name: Get structured data
+  hosts: rtr1
+  gather_facts: no
+  connection: network_cli
+
+  tasks:
+    - name: Read in parse_genie role
+      include_role:
+        name: parse_genie
+    
+    - name: grab show interfaces
+      ios_command:
+        commands: show interfaces
+      register: cli_output
+    
+    - debug:
+        var: cli_output
+
+    - name: read interfaces
+      set_fact:
+        parse_output: "{{ cli_output['stdout'][0] | parse_genie(command='show interfaces', os=ansible_network_os) }}"
+
+    - debug:
+        var: parse_output
+
+    - template:
+        src: crc.j2
+        dest: reports/rendered_crc_output.txt
